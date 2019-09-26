@@ -1,0 +1,8 @@
+# Npm package lock file
+package-lock.json
+
+# transpiled files
+dist
+
+# Dependency directory
+node_modules
