@@ -24,7 +24,7 @@ module.exports = env => ({
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
@@ -44,6 +44,9 @@ module.exports = env => ({
         ]
       }
     ]
+  },
+  resolve: {
+    extensions: [".js", ".jsx", ".es6", ".css", ".jpg"]
   },
   plugins: [
     new HtmlWebpackPlugin({

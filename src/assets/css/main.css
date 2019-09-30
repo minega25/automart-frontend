@@ -104,9 +104,9 @@ a {
   background-color: #3399cc;
 }
 .footer {
-  background-color: black;
+  background-color: white;
   text-align: center;
-  color: white;
+  color: black;
 }
 .form-input {
   position: relative;
@@ -181,7 +181,7 @@ a {
   width: 100%;
   height: 12.8rem;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../assets/images/teslas.jpg");
+    url("../images/teslas.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   font-size: 10px;
@@ -193,7 +193,7 @@ a {
 /**********************************/
 .buy-page-intro {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../assets/images/buy.jpg ");
+    url("../images/buy.jpg");
   background-size: cover;
   height: 120px;
   text-align: center;
@@ -223,7 +223,7 @@ a {
 /************************************/
 .sell-page-intro {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../assets/images/sell.jpg ");
+    url("../images/sell.jpg");
   background-size: cover;
   height: 120px;
   text-align: center;
@@ -343,7 +343,7 @@ a {
   }
   .home-page-intro {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("../assets/images/telsa1-big.jpg ");
+      url("../images/telsa1-big.jpg");
     background-size: cover;
     height: 400px;
   }
