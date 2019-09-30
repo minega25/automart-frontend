@@ -1,0 +1,20 @@
+{
+  "name": "Authors Haven",
+  "description": "A Social platform for the creative at heart.",
+  "keywords": ["publishing", "react", "front-end"],
+  "repository": "https://github.com/andela/codepirates-ah-frontend",
+  "scripts": {},
+  "env": {},
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "stack": "heroku-18"
+}
