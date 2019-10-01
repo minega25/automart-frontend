@@ -1,21 +1,22 @@
-import React, { Component } from "react";
-import CarCard from "./common/carCard";
-import carService from "../services/carService";
+import React, { Component } from 'react';
+import CarCard from './common/carCard';
+import carService from '../services/carService';
 
 class Home extends Component {
   state = { cars: [] };
+
   async componentDidMount() {
     try {
       const { data } = await carService.getCars();
       this.setState({ cars: data.data });
     } catch (error) {
-      console.log("Error", error);
+      console.log('Error', error);
     }
   }
 
   render() {
     return (
-      <React.Fragment>
+      <>
         <div className="row home-page-intro">
           <div className="column-5">
             <h3>Fast, safe and easy to buy and sell vehicles locally</h3>
@@ -76,7 +77,7 @@ class Home extends Component {
             />
           ))}
         </div>
-      </React.Fragment>
+      </>
     );
   }
 }

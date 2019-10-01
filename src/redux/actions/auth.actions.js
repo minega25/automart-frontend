@@ -1,25 +1,24 @@
-import { LOGIN_SUCCESS, LOGGED_OUT } from "./types";
+import { LOGIN_SUCCESS, LOGGED_OUT } from './types';
+import { login } from '../../services/authService';
 
-export const loginUser = () => {
-  return {
-    type: LOGIN_SUCCESS
-  };
-};
-export const logoutUser = () => {
-  return {
-    type: LOGGED_OUT
-  };
-};
+export const loginUser = (data) => ({
+  type: LOGIN_SUCCESS,
+  user: data,
+});
+export const logoutUser = () => ({
+  type: LOGGED_OUT,
+});
 
-export const login = () => dispatch => {
+export const fetchUser = (email, password) => async (dispatch) => {
   try {
-    dispatch(loginUser());
+    const res = await login(email, password);
+    dispatch(loginUser(res));
   } catch (error) {
     console.log(error);
   }
 };
 
-export const logout = () => dispatch => {
+export const logout = () => (dispatch) => {
   try {
     dispatch(logoutUser());
   } catch (error) {

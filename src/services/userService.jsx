@@ -1,14 +1,17 @@
-import http from "./httpService";
-import { apiUrl } from "../config.json";
+import { toast } from 'react-toastify';
+import http from './httpService';
+import { apiUrl } from '../config.json';
 
-const apiEndpoint = apiUrl + "/auth/signup";
+const apiEndpoint = `${apiUrl}/auth/signup`;
 
-export function register(user) {
-  return http.post(apiEndpoint, {
+export default async function register(user) {
+  const res = await http.post(apiEndpoint, {
     first_name: user.first_name,
     last_name: user.last_name,
     address: user.address,
     password: user.password,
-    email: user.email
+    email: user.email,
   });
+  toast.success(res.data.message);
+  return res;
 }

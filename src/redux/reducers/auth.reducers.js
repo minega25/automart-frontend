@@ -1,20 +1,21 @@
-import * as auth from "../types/auth.type";
+import * as auth from '../actions/types';
 
 const initialState = {
-  user: "",
-  isAuthenticated: false
+  user: '',
+  isAuthenticated: false,
 };
-const authReducer = (state = initialState, { type }) => {
-  switch (type) {
-    case "LOGIN_SUCCESS":
+const authReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case auth.LOGIN_SUCCESS:
       return {
         ...state,
-        isAuthenticated: true
+        isAuthenticated: true,
+        user: action.user,
       };
-    case "LOGGED_OUT":
+    case auth.LOGGED_OUT:
       return {
         ...state,
-        isAuthenticated: false
+        isAuthenticated: false,
       };
     default:
       return state;
